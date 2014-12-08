@@ -1,14 +1,14 @@
-var app = angular.module('spaApp', ['ui.router']);
+var app = angular.module('spaApp', ['ui.router', 'templates']);
 
 app.config(function($stateProvider, $urlRouterProvider){
 	$urlRouterProvider.otherwise('/');
 	$stateProvider
 	.state('home', {
 		url: '/home',
-		template: '<h1>Home</h1>'
-	})
+		templateUrl: 'home.html'
+	});
 	.state('about', {
 		url: '/about',
-		template: '<h1>About</h1>'
-	})
+		templateUrl: 'about.html'
+	});
 });
