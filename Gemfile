@@ -44,3 +44,4 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'mongoid'
 gem 'bower-rails'
+gem 'angular-rails-templates'
