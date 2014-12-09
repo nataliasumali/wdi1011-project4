@@ -1,6 +1,18 @@
+var invocation = new XMLHttpRequest();
+var url = 'https://api.instagram.com/resources/public-data';
+
+function callOtherDomain() {
+	if(invocation) {
+		invocation.open('GET', url, true);
+		invocation.onreadystatechange = handler;
+		invocation.send();
+	}
+};
+
 angular.module('spaApp', ['ui.router', 'templates'])
 
 .config(function($stateProvider, $urlRouterProvider){
+	// delete $stateProvider.defaults.headers.common['X-requested-With'];
 
 	$urlRouterProvider.otherwise('/');
 
