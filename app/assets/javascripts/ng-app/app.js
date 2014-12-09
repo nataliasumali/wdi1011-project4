@@ -8,12 +8,12 @@ angular.module('spaApp', ['ui.router', 'templates'])
 
 	.state('home', {
 		url: '/home',
-		templateUrl: 'home.html'
+		templateUrl: 'home.html',
+		controller: 'homeController'
 	})
 	.state('about', {
 		url: '/about',
-		templateUrl: 'about.html',
-		controller: 'aboutController'
+		templateUrl: 'about.html'
 	})
 	.state('map', {
 		url: '/map',
@@ -21,7 +21,7 @@ angular.module('spaApp', ['ui.router', 'templates'])
 	})
 })
 
-.controller('aboutController', function($scope, api) {
+.controller('homeController', function($scope, api) {
 	api.getPlaces()
 	.then(function(data){
 		$scope.data = data.images
