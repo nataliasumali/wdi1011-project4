@@ -13,12 +13,13 @@
  */
 @import 'bootstrap';
 @import url(http://fonts.googleapis.com/css?family=Pacifico);
+@import url(http://fonts.googleapis.com/css?family=Gochi+Hand);
 
 /*application.html.erb*/
 
 a {
-	font-family: 'Pacifico';
-	font-size: 50px;
+	font-family: 'Gochi Hand';
+	font-size: 100px;
 }
 
 .click {
