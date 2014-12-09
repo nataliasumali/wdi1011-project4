@@ -2,15 +2,18 @@
 <html>
 <head>
   <title>Practice4</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+
   <%= csrf_meta_tags %>
 </head>
 <body ng-app="spaApp">
 
-<a ui-sref="home">Home</a>
-<a ui-sref="about">About</a>
-<a ui-sref="map">Map</a>
+<a ui-sref="home">Explore</a>
+<a ui-sref="about">Photos</a>
+<a ui-sref="map">Info</a>
 
 <%= yield %>
 
