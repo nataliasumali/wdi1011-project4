@@ -7,7 +7,7 @@ angular.module('spaApp', ['ui.router', 'templates'])
 	$stateProvider
 
 	.state('home', {
-		url: '/home',
+		url: '/home/',
 		templateUrl: 'home.html',
 		controller: 'homeController'
 	})
@@ -24,14 +24,16 @@ angular.module('spaApp', ['ui.router', 'templates'])
 .controller('homeController', function($scope, api) {
 	api.getPlaces()
 	.then(function(data){
-		$scope.data = data.images
+		console.log(data);
+		$scope.data = data
+
 	})
 })
 
 .service('api', function($http) {
 	return {
 		getPlaces: function() {
-			var promise = $http.get('https://api.instagram.com/v1/media/popular?client_id=43d5ec3d450445fa9aafc9765600598b')
+			var promise = $http.get('https://api.instagram.com/v1/media/3?client_id=43d5ec3d450445fa9aafc9765600598b')
 			.then(function(response) {
 				return response
 			});
