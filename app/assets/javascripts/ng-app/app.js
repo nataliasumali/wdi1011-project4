@@ -25,8 +25,13 @@ angular.module('spaApp', ['ui.router', 'templates'])
 	api.getPlaces()
 	.then(function(data){
 		console.log(data);
-		$scope.data = data
-
+		$scope.data = data.data.data.comments.data;
+		var dataArray = [];
+		var dataLength = data.data.data.comments.data.length;
+		for (var i=0; i < dataLength; i++) {
+			dataArray.push($scope.data[i].created_time);
+		}
+		console.log(dataArray);
 	})
 })
 
@@ -41,3 +46,4 @@ angular.module('spaApp', ['ui.router', 'templates'])
 		}
 	}
 });
+
