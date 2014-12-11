@@ -25,7 +25,8 @@ angular.module('spaApp', ['ui.router', 'templates'])
 	api.getPlaces()
 	.then(function(data){
 		console.log(data);
-		$scope.data = data.data.data.images.thumbnail.url;
+		$scope.data = data.data.data.images.standard_resolution
+		.url;
 		console.log($scope.data);
 		// var dataArray = [];
 		// var dataLength = data.data.data.images.thumbnail.data;
