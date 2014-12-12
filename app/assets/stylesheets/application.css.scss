@@ -17,34 +17,33 @@
 
 /*application.html.erb*/
 
-a {
+.body {
+
 	font-family: 'Gochi Hand';
-	font-size: 120px;
-	color: rgb(56,11,74);
-}
 
-/*.body {
-	background-image: url(http://media.giphy.com/media/V7iv6F73zBJe/giphy.gif);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: fixed;
-}*/
+	#explore {
+		font-size: 120px;
+		color: black;
+	}
 
-.click {
-	text-align: center;
-}
+	.click {
+		text-align: center;
+	}
 
-/*home.html.erb*/
+	/*home.html.erb*/
 
-.explore-wrapper {
-	width: 100%;
-	margin: 0 25px 0 25px;
-}
+	.input-group {
+		margin-bottom: 10px;
+	}
 
-.search {
-	margin-bottom: 25px;
-}
+	.image-box {
+		margin: 0 5px 0 5px;
+	}
 
-img {
-	border-radius: 50px;
+	img {
+		border-radius: 50px;
+	}
+
+	.spacer10 { height: 10px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+
 }
