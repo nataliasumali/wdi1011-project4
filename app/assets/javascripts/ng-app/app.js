@@ -27,12 +27,6 @@ angular.module('spaApp', ['ui.router', 'templates'])
 		console.log(data);
 		$scope.data = data.data.data[0].images.standard_resolution
 		console.log($scope.data);
-		// var dataArray = [];
-		// var dataLength = data.data.data.images.thumbnail.data;
-		// for (var i=0; i < dataLength; i++) {
-		// 	dataArray.push($scope.data.url);
-		// }
-		// console.log(dataArray);
 	})
 })
 
