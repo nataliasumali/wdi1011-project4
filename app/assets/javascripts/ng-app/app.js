@@ -22,12 +22,19 @@ angular.module('spaApp', ['ui.router', 'templates'])
 })
 
 .controller('homeController', function($scope, api) {
+
+	$scope.myData = {};
+	$scope.myData.doClick = function() {
+		alert("clicked");
+	}
+
 	api.getPlaces()
 	.then(function(data){
 		console.log(data);
-		$scope.data = data.data.data[0].images.standard_resolution
+		$scope.data = data.data.data[0].images.thumbnail
 		console.log($scope.data);
 	})
+
 })
 
 .service('api', function($http) {
