@@ -14,11 +14,13 @@
   		</div> -->
 
 			      <div class="spacer10"></div>
-			      <div ng-repeat="image in data['data']">
+			      
+			      <ul ng-repeat="image in data['data']" ng-repeat="location in data['data']">
 
-			      <img src={{image['images']['thumbnail']['url']}}>
+			      <li><img src={{image['images']['thumbnail']['url']}}></li>
+			      <li><p>{{location['location']['latitude, longitude']}}</p></li>
 						
-			      </div>
+			      </ul>
 
 		</div>
 

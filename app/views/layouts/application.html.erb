@@ -11,18 +11,27 @@
 </head>
 <body class="body" ng-app="spaApp">
 
-<div class="wrapper">
+<div class="wrapper col-xs-12">
+
 	<div class="page-header">
 	  <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT_cTHzKsV6nPqUnf5lOdqPz9dMaBz0fs7nMevBdJ84dXz1i4hzxA" class="" alt="">
-	  <a id="explore" ui-sref="home">Explore ...</a>
+	  <h1>Explore ...</h1>
 	</div>
 
+	<div class="container col-xs-12">
+		<div class="search col-xs-4">
+			<div class="circle"></div>
+		</div>
+		<div class="search col-xs-4">
+			<div class="circle"></div>
+		</div>
+		<div class="search col-xs-4">
+		<div class="circle">
+		<a id="go" ui-sref="home">go</a>
+		</div>
+		</div>
+	</div>
 
-
-
-
-
-	
 </div>
 <%= yield %>
 
