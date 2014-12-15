@@ -13,10 +13,12 @@
 		    </div>
   		</div> -->
 
-		  
-			      <a href="#" class="btn btn-default btn-block" role="button">Click here</a> 
 			      <div class="spacer10"></div>
-			      <img src={{data.url}}>
+			      <div ng-repeat="image in data['data']">
+
+			      <img src={{image['images']['thumbnail']['url']}}>
+						
+			      </div>
 
 		</div>
 
