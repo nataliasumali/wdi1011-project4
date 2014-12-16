@@ -1,18 +1,33 @@
 <body class="body">
 
-<button ng-click="getImages()"></button>
+<div class="container search-row col-xs-12">
 
-	<div class="row">
+	<div class="search col-xs-4">
+			<input type="text" placeholder="latitude" class="userLat">
+	</div>
 
-		<div class="col-sm-12">
+	<div class="search col-xs-4">
+			<input type="text" placeholder="longitude" class="userLng">
+	</div>
 
-	     <ul ng-repeat="d in data['data']">
-	     <li><img src={{d['images']['thumbnail']['url']}}></li>
-	     <li><p>lat: {{d['location']['latitude']}}, lng: {{d['location']['longitude']}}</p></li>
-	     </ul>
+	<div class="search col-xs-4">
+	<button ng-click="getImages()">go</button>
+	</div>
 
-		</div>
+</div>
+
+<div class="container col-xs-12">
+
+	<div class="thumbnail col-xs-12 col-sm-6 col-md-4" ng-repeat="d in data['data']">
+
+	    <img src={{d['images']['thumbnail']['url']}} class="img-thumbnail">
+
+    <div class="caption">
+      <h4>lat: {{d['location']['latitude']}}, lng: {{d['location']['longitude']}}</h4>
+    </div>
 
 	</div>
+
+</div>
 
 </body>
