@@ -20,10 +20,15 @@
 .body {
 
 	font-family: 'Gochi Hand';
+	background-color: rgb(0,0,56);
+	background-image: url("http://cdn.desktopwallpapers4.me/wallpapers/digital-art/1920x1080/2/14888-world-map-1920x1080-digital-art-wallpaper.jpg");
+	color: rgb(255,195,13);
 
 	#explore {
 		font-size: 150px;
-		color: black;
+		color: rgb(255,195,13);
+		background-color: rgba(255, 255, 255, 0);
+		border-color: rgba(255, 255, 255,0);
 	}
 
 	#explore:hover {
@@ -31,10 +36,28 @@
 		color: blue;
 	}
 
+
 	/*home.html.erb*/
 
 	.search-row {
 		margin-bottom: 20px;
+	}
+
+	.form-control {
+		height: 100px;
+		background-color: rgba(255, 255, 255, 0);
+		border: 3px solid rgb(255,195,13);
+		font-size: 50px;
+		color: rgb(255,195,13);
+	}
+
+	.go {
+		height: 100px;
+		width: 100px;
+		border-radius: 50%;
+		background-color: rgb(255,195,13);
+		color: rgb(0,0,56);
+		font-size: 50px;
 	}
 
 	.thumbnail {

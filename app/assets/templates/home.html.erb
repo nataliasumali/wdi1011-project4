@@ -1,22 +1,28 @@
 <body class="body">
 
+<!-- input lat and lng and submit -->
+
 <div class="container search-row col-xs-12">
 
 	<div class="search col-xs-4">
-			<input type="text" placeholder="latitude" class="userLat">
+			<input type="text" placeholder="latitude" class="form-control userLat input">
 	</div>
 
 	<div class="search col-xs-4">
-			<input type="text" placeholder="longitude" class="userLng">
+			<input type="text" placeholder="longitude" class="form-control userLng input">
 	</div>
 
 	<div class="search col-xs-4">
-	<button ng-click="getImages()">go</button>
+	<button class="go btn btn-default" ng-click="getImages()">go</button>
 	</div>
 
 </div>
 
+<!-- lat/lng options to drag and drop, images rendered after 'go' button is clicked -->
+
 <div class="container col-xs-12">
+
+	<div class="latlng"></div>
 
 	<div class="thumbnail col-xs-12 col-sm-6 col-md-4" ng-repeat="d in data['data']">
 
@@ -27,6 +33,8 @@
     </div>
 
 	</div>
+
+	<div class="latlng"></div>
 
 </div>
 
