@@ -37,11 +37,15 @@
 	}
 
 
-	/*home.html.erb*/
+	/*HOME.HTML.ERB*/
+
+	/*THE CONTAINER FOR INPUT TEXT AND BUTTON*/
 
 	.search-row {
 		margin-bottom: 20px;
 	}
+
+	/*THE INPUT*/
 
 	.form-control {
 		height: 100px;
@@ -51,14 +55,48 @@
 		color: rgb(255,195,13);
 	}
 
+	/*THE BUTTON*/
+
 	.go {
 		height: 100px;
 		width: 100px;
-		border-radius: 50%;
 		background-color: rgb(255,195,13);
 		color: rgb(0,0,56);
 		font-size: 50px;
+		padding:10px 15px;
+		border:none;
+		cursor:pointer;
+
+		-webkit-transition:-webkit-transform 1s,opacity 1s,background 1s,width 1s,height 1s,font-size 1s;
+
+		-o-transition-property:width,height,-o-transform,background,font-size,opacity,color;
+		-o-transition-duration:1s,1s,1s,1s,1s,1s,1s;
+
+		-moz-transition-property:width, height, -moz-transform, background, font-size, opacity, color;
+		-moz-transition-duration:1s,1s,1s,1s,1s,1s,1s;
+
+		transition-property:width,height,transform,background,font-size,opacity;
+		transition-duration:1s,1s,1s,1s,1s,1s;
+
+		box-shadow:0 0 2px rgba(0,0,0,0.5);
+
+		text-shadow:0 0 5px rgba(255,255,255,0.5);
+
+		display:inline-block;    /* It is important for the button to rotate*/
 	}
+
+	.go:hover {
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+
+		background:rgb(0,0,56);
+		font-size:30px;
+		color:rgb(255,195,13);
+}
+
+	/*THE IMAGES*/
 
 	.thumbnail {
 		margin-left: 10px;
