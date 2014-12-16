@@ -18,20 +18,29 @@
 	</div>
 
 	<div class="container col-xs-12">
+
 		<div class="search col-xs-4">
-			<div class="circle"></div>
+			<div class="circle">
+				<input type="text" placeholder="latitude" class="userLat">
+			</div>
 		</div>
+
 		<div class="search col-xs-4">
-			<div class="circle"></div>
+			<div class="circle">
+				<input type="text" placeholder="longitude" class="userLng">
+			</div>
 		</div>
+
 		<div class="search col-xs-4">
 		<div class="circle">
 		<a id="go" ui-sref="home">go</a>
 		</div>
 		</div>
+
 	</div>
 
-</div>
+</div>	
+
 <%= yield %>
 
 </body>

@@ -23,10 +23,18 @@ angular.module('spaApp', ['ui.router', 'templates'])
 
 .controller('homeController', function($scope, api) {
 
-	api.getPlaces()
-	.then(function(data) {
-		$scope.data = data.data;
-	})
+	$scope.getImages = function() {
+
+		var lat = document.getElementsByClassName('userLat')[0].value;
+		var lng = document.getElementsByClassName('userLng')[0].value;
+
+		api.getPlaces(lat, lng)
+		.then(function(data) {
+			$scope.data = data.data;
+		});
+
+	};
+
 
 })
 
@@ -34,9 +42,9 @@ angular.module('spaApp', ['ui.router', 'templates'])
 
 	return {
 
-		getPlaces: function() {
+		getPlaces: function(lat, lng) {
 
-			var promise = $http.get('https://api.instagram.com/v1/media/search?lat=48.858844&lng=2.294351&client_id=43d5ec3d450445fa9aafc9765600598b')
+			var promise = $http.get('https://api.instagram.com/v1/media/search?lat=' + lat + '&lng=' + lng + '&client_id=43d5ec3d450445fa9aafc9765600598b')
 			.then(function(response) {
 				return response
 			});

@@ -1,30 +1,15 @@
 <body class="body">
 
+<button ng-click="getImages()"></button>
+
 	<div class="row">
 
 		<div class="col-sm-12">
 
-			<!-- <div class="col-xs-12">
-		    <div class="input-group">
-		      <input type="text" class="form-control">
-		      <span class="input-group-btn">
-		        <button class="btn btn-default" type="button">Go!</button>
-		      </span>
-		    </div>
-  		</div> -->
-
-			      <!-- <div class="spacer10"></div>
-
-			      <div ng-repeat="image in data['data']"><img src={{image['images']['thumbnail']['url']}}>
-						
-						<div ng-repeat="loc in data['data']">{{loc['location']['latitude']}}, {{loc['location']['longitude']}}</div>
-						
-			     </div> -->
-
-			     <ul ng-repeat="d in data['data']">
-			     <li><img src={{d['images']['thumbnail']['url']}}></li>
-			     <li>{{d['location']['latitude']}}, {{d['location']['longitude']}}</li>
-			     </ul>
+	     <ul ng-repeat="d in data['data']">
+	     <li><img src={{d['images']['thumbnail']['url']}}></li>
+	     <li><p>lat: {{d['location']['latitude']}}, lng: {{d['location']['longitude']}}</p></li>
+	     </ul>
 
 		</div>
 
