@@ -20,37 +20,201 @@
 
 <!-- lat/lng options to drag and drop, images rendered after 'go' button is clicked -->
 
-<div class="container col-xs-12">
+<div class="row">
 
-	<!-- lat/lng options -->
+	<!-- latitude options -->
 
-	<div>
-		<input type="text" value="41.9033"
+	<div class="latitudeOptions col-xs-4">
+
+	<h1>latitudes:</h1>
+
+		<input type="text" class="latLong vatican" value="41.9033"
                   ondragstart="handleDragDropEvent(event)"
                   ondrag="handleDragDropEvent(event)"
                   ondragend="handleDragDropEvent(event)" />
 
-    <input type="text" value="12.4533"
-                  ondragstart="handleDragDropEvent(event)"
-                  ondrag="handleDragDropEvent(event)"
-                  ondragend="handleDragDropEvent(event)" />
+    <input type="text" class="latLong london" value="51.5072"
+							    ondragstart="handleDragDropEvent(event)"
+							    ondrag="handleDragDropEvent(event)"
+							    ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong paris" value="48.8567"
+							    ondragstart="handleDragDropEvent(event)"
+							    ondrag="handleDragDropEvent(event)"
+							    ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong rome" value="41.9000"
+							    ondragstart="handleDragDropEvent(event)"
+							    ondrag="handleDragDropEvent(event)"
+							    ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong losAngeles" value="34.0500"
+							    ondragstart="handleDragDropEvent(event)"
+							    ondrag="handleDragDropEvent(event)"
+							    ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong sanFrancisco" value="37.7833"
+							    ondragstart="handleDragDropEvent(event)"
+							    ondrag="handleDragDropEvent(event)"
+							    ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong newYork" value="40.7127"
+							    ondragstart="handleDragDropEvent(event)"
+							    ondrag="handleDragDropEvent(event)"
+							    ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong beijing" value="39.9139"
+							    ondragstart="handleDragDropEvent(event)"
+							    ondrag="handleDragDropEvent(event)"
+							    ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong tokyo" value="35.6895"
+							    ondragstart="handleDragDropEvent(event)"
+							    ondrag="handleDragDropEvent(event)"
+							    ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong seoul" value="37.5667"
+							    ondragstart="handleDragDropEvent(event)"
+							    ondrag="handleDragDropEvent(event)"
+							    ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong abuja" value="9.0067"
+							    ondragstart="handleDragDropEvent(event)"
+							    ondrag="handleDragDropEvent(event)"
+							    ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong cairo" value="30.0500"
+							    ondragstart="handleDragDropEvent(event)"
+							    ondrag="handleDragDropEvent(event)"
+							    ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong kampala" value="0.3136"
+							    ondragstart="handleDragDropEvent(event)"
+							    ondrag="handleDragDropEvent(event)"
+							    ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong greaterTaree" value="31.9000"
+							    ondragstart="handleDragDropEvent(event)"
+							    ondrag="handleDragDropEvent(event)"
+							    ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong waggaWagga" value="35.1189"
+							    ondragstart="handleDragDropEvent(event)"
+							    ondrag="handleDragDropEvent(event)"
+							    ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong sydney" value="33.8600"
+							    ondragstart="handleDragDropEvent(event)"
+							    ondrag="handleDragDropEvent(event)"
+							    ondragend="handleDragDropEvent(event)" />
 
 	</div>
 
-	<div class="col-xs-4 col-xs-offset-4" ng-repeat="d in data['data']">
+	<!-- images rendered -->
 
-		<div class="col-xs-12">
+	<div class="col-xs-4">
+
+	<h1>findings:</h1>
+
+		<div class="imagesRendered" ng-repeat="d in data['data']">
 
 		    <img src={{d['images']['thumbnail']['url']}} class="img-thumbnail">
 
 		    <div class="caption">
-		      <h4><a class="loc-url" href=""> {{d['location']['latitude']}},{{d['location']['longitude']}}</a></h4>
+		      <h4><a class="locationUrl" href=""> {{d['location']['latitude']}},{{d['location']['longitude']}}</a></h4>
 		    </div>
 
 		</div>
 
 	</div>
 
+	<!-- longitude options -->
+
+	<div class="longitudeOptions col-xs-4">
+
+	<h1>longitudes:</h1>
+		
+		<input type="text" class="latLong vatican" value="12.4533"
+                  ondragstart="handleDragDropEvent(event)"
+                  ondrag="handleDragDropEvent(event)"
+                  ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong london" value="0.1275"
+                  ondragstart="handleDragDropEvent(event)"
+                  ondrag="handleDragDropEvent(event)"
+                  ondragend="handleDragDropEvent(event)" />
+                  
+    <input type="text" class="latLong paris" value="2.3508"
+                  ondragstart="handleDragDropEvent(event)"
+                  ondrag="handleDragDropEvent(event)"
+                  ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong rome" value="12.5000"
+                  ondragstart="handleDragDropEvent(event)"
+                  ondrag="handleDragDropEvent(event)"
+                  ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong losAngeles" value="118.2500"
+                  ondragstart="handleDragDropEvent(event)"
+                  ondrag="handleDragDropEvent(event)"
+                  ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong sanFrancisco" value="122.4167"
+                  ondragstart="handleDragDropEvent(event)"
+                  ondrag="handleDragDropEvent(event)"
+                  ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong newYork" value="74.0059"
+                  ondragstart="handleDragDropEvent(event)"
+                  ondrag="handleDragDropEvent(event)"
+                  ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong beijing" value="116.3917"
+                  ondragstart="handleDragDropEvent(event)"
+                  ondrag="handleDragDropEvent(event)"
+                  ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong tokyo" value="139.6917"
+                  ondragstart="handleDragDropEvent(event)"
+                  ondrag="handleDragDropEvent(event)"
+                  ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong seoul" value="126.9781"
+                  ondragstart="handleDragDropEvent(event)"
+                  ondrag="handleDragDropEvent(event)"
+                  ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong abujo" value="7.4833"
+                  ondragstart="handleDragDropEvent(event)"
+                  ondrag="handleDragDropEvent(event)"
+                  ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong cairo" value="31.2333"
+                  ondragstart="handleDragDropEvent(event)"
+                  ondrag="handleDragDropEvent(event)"
+                  ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong kampala" value="32.5811"
+                  ondragstart="handleDragDropEvent(event)"
+                  ondrag="handleDragDropEvent(event)"
+                  ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong greaterTaree" value="31.9000"
+                  ondragstart="handleDragDropEvent(event)"
+                  ondrag="handleDragDropEvent(event)"
+                  ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong waggaWagga" value="152.4500"
+                  ondragstart="handleDragDropEvent(event)"
+                  ondrag="handleDragDropEvent(event)"
+                  ondragend="handleDragDropEvent(event)" />
+
+    <input type="text" class="latLong sydney" value="151.2094"
+                  ondragstart="handleDragDropEvent(event)"
+                  ondrag="handleDragDropEvent(event)"
+                  ondragend="handleDragDropEvent(event)" />                
+
+	</div>
 
 </div>
 
