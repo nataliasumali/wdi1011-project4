@@ -5,16 +5,39 @@
 <div class="container search-row col-xs-12">
 
 	<div class="search col-xs-4">
-			<input type="text" placeholder="latitude" class="form-control userLat input">
+			<input id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" type="text" placeholder="latitude" class="form-control userLat input" autofocus>
 	</div>
 
 	<div class="search col-xs-4">
-			<input type="text" placeholder="longitude" class="form-control userLng input">
+			<input id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" type="text" placeholder="longitude" class="form-control userLng input">
 	</div>
 
 	<div class="search col-xs-4">
 	<button class="go btn btn-default" ng-click="getImages()">go</button>
 	</div>
+
+
+
+
+
+
+	<P>Try dragging the text from the left textbox to the right one.</p>
+        <P>
+        <input type="text" value="41.9033"
+                  ondragstart="handleDragDropEvent(event)"
+                  ondrag="handleDragDropEvent(event)"
+                  ondragend="handleDragDropEvent(event)" />
+        <input type="text"
+               ondragenter="handleDragDropEvent(event)"
+               ondragover="handleDragDropEvent(event)"
+               ondragleave="handleDragDropEvent(event)"
+               ondrop="handleDragDropEvent(event)" />
+        </p>
+        <P><textarea rows="10" cols="25" readonly="readonly" id="txt1"></textarea></p>
+
+
+
+        
 
 </div>
 
@@ -22,19 +45,32 @@
 
 <div class="container col-xs-12">
 
-	<div class="latlng col-xs-4"></div>
-
-	<div class="instagram col-xs-4" ng-repeat="d in data['data']">
-
-	    <img src={{d['images']['thumbnail']['url']}} class="img-thumbnail">
-
-    <div class="caption">
-      <h4>lat: {{d['location']['latitude']}}, lng: {{d['location']['longitude']}}</h4>
-    </div>
-
+	<div id="latlng">
+		<p id="drag1" draggable="true" ondragstart="drag(event)">41.9033</p>
+		<p id="drag2" draggable="true" ondragstart="drag(event)">12.4533</p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
 	</div>
 
-	<div class="latlng col-xs-4"></div>
+	<div class="instagram col-xs-4 col-xs-offset-4" ng-repeat="d in data['data']">
+
+		<div class="col-xs-12">
+
+		    <img src={{d['images']['thumbnail']['url']}} class="img-thumbnail">
+
+		    <div class="caption">
+		      <h4><a class="loc-url" href=""> {{d['location']['latitude']}},{{d['location']['longitude']}}</a></h4>
+		    </div>
+
+		</div>
+
+	</div>
 
 </div>
 

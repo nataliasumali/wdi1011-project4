@@ -35,7 +35,6 @@ angular.module('spaApp', ['ui.router', 'templates'])
 
 	};
 
-
 })
 
 .service('api', function($http) {

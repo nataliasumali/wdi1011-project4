@@ -15,7 +15,7 @@
 @import url(http://fonts.googleapis.com/css?family=Pacifico);
 @import url(http://fonts.googleapis.com/css?family=Gochi+Hand);
 
-/*application.html.erb*/
+/*APPLICATION.HTML.ERB*/
 
 .body {
 
@@ -33,9 +33,8 @@
 
 	#explore:hover {
 		text-decoration: none;
-		color: blue;
+		color: rgb(120, 195, 255);
 	}
-
 
 	/*HOME.HTML.ERB*/
 
@@ -49,10 +48,10 @@
 
 	.form-control {
 		height: 100px;
-		background-color: rgba(255, 255, 255, 0);
-		border: 3px solid rgb(255,195,13);
+		background-color: rgba(255, 255, 255, 0.7);
+		border: 5px solid rgb(255,195,13);
 		font-size: 50px;
-		color: rgb(255,195,13);
+		color: rgb(0,0,56);
 	}
 
 	/*THE BUTTON*/
@@ -96,11 +95,21 @@
 		color:rgb(255,195,13);
 }
 
+.loc-url {
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 5px;
+	color: rgb(0,0,56);
+}
+
 	/*THE IMAGES*/
 
 	.thumbnail {
 		margin-left: 10px;
 		margin-right: 10px;
+	}
+
+	.latlng {
+
 	}
 
 }
