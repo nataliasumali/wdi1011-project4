@@ -1,5 +1,3 @@
-== README
-
 # wdi1011-project4
 
 ## Overview
