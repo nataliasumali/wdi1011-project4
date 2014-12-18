@@ -35,6 +35,10 @@ angular.module('spaApp', ['ui.router', 'templates'])
 
 	};
 
+	$scope.reset = function() {
+    window.location.reload(false);
+}
+
 })
 
 .service('api', function($http) {
