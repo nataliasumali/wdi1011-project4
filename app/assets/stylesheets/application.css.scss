@@ -12,21 +12,23 @@
  *= require_tree .
  */
 @import 'bootstrap';
-@import url(http://fonts.googleapis.com/css?family=Pacifico);
+@import url(http://fonts.googleapis.com/css?family=Bonbon);
 @import url(http://fonts.googleapis.com/css?family=Gochi+Hand);
+@import url(http://fonts.googleapis.com/css?family=Raleway);
 
 /*/////////////////////////////////////APPLICATION.HTML.ERB//////////////////////////////*/
 
 .body {
 
-	font-family: 'Gochi Hand';
+	font-family: 'Raleway';
 	background-color: rgb(0,0,56);
 	background-image: url("http://cdn.desktopwallpapers4.me/wallpapers/digital-art/1920x1080/2/14888-world-map-1920x1080-digital-art-wallpaper.jpg");
 	color: rgb(255,195,13);
 
-	/*THE TITLE/HEADER*/
+	/*THE HEADER*/
 
 	#explore {
+		font-family: 'Bonbon';
 		font-size: 150px;
 		color: rgb(255,195,13);
 		background-color: rgba(255, 255, 255, 0);
@@ -97,6 +99,8 @@
 		color:rgb(255,195,13);
 }
 
+	/*THE RESET BUTTON*/
+
 	.reset {
 		font-size: 30px;
 	}
@@ -114,12 +118,77 @@
 
 	.latLong {
 		font-size: 40px;
-		background-color: rgba(255,195,13, 0.7);
 		color: rgb(0,0,56);
 		border-radius: 30px;
 		text-align: center;
 		border: none;
 		margin-bottom: 5px;
+	}
+
+	/*THE PICKED CITIES :)*/
+
+	.vatican {
+		background-color: rgba(255, 255, 255, 0.7);
+	}
+
+	.london {
+		background-color: rgba(204, 19, 61, 0.7);
+	}
+
+	.paris {
+		background-color: rgba(115, 175, 204, 0.7);
+	}
+
+	.rome {
+		background-color: rgba(156, 218, 42, 0.6);
+	}
+
+	.losAngeles {
+		background-color: rgba(216, 157, 70, 0.6);
+	}
+
+	.sanFrancisco {
+		background-color: rgba(177, 26, 181, 0.6);
+	}
+
+	.newYork {
+		background-color: rgba(83, 246, 115, 0.5);
+	}
+
+	.beijing {
+		background-color: rgba(82, 78, 69, 0.5);
+	}
+
+	.tokyo {
+		background-color: rgba(204, 156, 202, 0.7);
+	}
+
+	.seoul {
+		background-color: rgba(174, 215, 218, 0.7);
+	}
+
+	.abuja {
+		background-color: rgba(31, 215, 218, 0.7);
+	}
+
+	.cairo {
+		background-color: rgba(216, 70, 86, 0.7);
+	}
+
+	.kampala {
+		background-color: rgba(136, 31, 218, 0.7);
+	}
+
+	.greaterTaree {
+		background-color: rgba(63, 8, 218, 0.7);
+	}
+
+	.waggaWagga {
+		background-color: rgba(216, 89, 70, 0.7);
+	}
+
+	.sydney {
+		background-color: rgba(43, 227, 153, 0.7);
 	}
 
 	/*THE IMAGES*/
