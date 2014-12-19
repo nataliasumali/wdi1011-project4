@@ -46,7 +46,7 @@ angular.module('spaApp', ['ui.router', 'templates'])
 
 }])
 
-.service('api',['$http', function($http) {
+.service('api', ['$http', function($http) {
 
 	return {
 
