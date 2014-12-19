@@ -21,7 +21,7 @@ angular.module('spaApp', ['ui.router', 'templates'])
 	})
 })
 
-.controller('homeController', function($scope, api) {
+.controller('homeController', ['$scope', 'api', function($scope, api) {
 
 	$scope.getImages = function() {
 
@@ -40,7 +40,7 @@ angular.module('spaApp', ['ui.router', 'templates'])
 	};
 
   $scope.centerMap = function(data){
-  	$('#myCoolMap').attr('src', 'https://maps.googleapis.com/maps/api/staticmap?center=' + data['location']['latitude'] + ',' + data['location']['longitude'] + '&zoom=12&size=400x400&markers=color:black');
+  	$('#myCoolMap').attr('src', 'https://maps.googleapis.com/maps/api/staticmap?center=' + data['location']['latitude'] + ',' + data['location']['longitude'] + '&zoom=12&size=400x400');
   };
 
 })
@@ -60,4 +60,4 @@ angular.module('spaApp', ['ui.router', 'templates'])
 
 		}
 	}
-});
+}]);
