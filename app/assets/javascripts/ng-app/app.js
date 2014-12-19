@@ -11,6 +11,9 @@ angular.module('spaApp', ['ui.router', 'templates'])
 		templateUrl: 'home.html',
 		controller: 'homeController'
 	})
+
+	// extra states to build upon later on
+
 	.state('about', {
 		url: '/about',
 		templateUrl: 'about.html'
