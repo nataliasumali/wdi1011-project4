@@ -43,7 +43,7 @@ angular.module('spaApp', ['ui.router', 'templates'])
   	$('#myCoolMap').attr('src', 'https://maps.googleapis.com/maps/api/staticmap?center=' + data['location']['latitude'] + ',' + data['location']['longitude'] + '&zoom=12&size=400x400');
   };
 
-})
+}])
 
 .service('api', function($http) {
 
@@ -60,4 +60,4 @@ angular.module('spaApp', ['ui.router', 'templates'])
 
 		}
 	}
-}]);
+});
