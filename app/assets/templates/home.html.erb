@@ -1,8 +1,6 @@
-<body class="body">
-
 <!-- input lat and lng and submit -->
 
-	<div class="container search-row col-xs-12">
+<div class="container search-row col-xs-12">
 
 	<div class="search col-xs-4">
 			<input type="text" placeholder="latitude" class="form-control userLat input" ondragenter="handleDragDropEvent(event)" ondragover="handDragDropEvent(event)" ondragleave="handleDragDropEvent(event)" ondrop="handleDragDropEvent(event)" autofocus>
@@ -13,8 +11,8 @@
 	</div>
 
 	<div class="search col-xs-4">
-	<button class="go btn btn-default" ng-click="getImages()">go</button>
-	<button class="go reset btn btn-default" ng-click="reset()">reset</button>
+  	<button class="go btn btn-default" ng-click="getImages()">go</button>
+  	<button class="go reset btn btn-default" ng-click="reset()">reset</button>
 	</div>
 
 </div>
@@ -119,26 +117,30 @@
 
 		<div class="imagesRendered" ng-repeat="d in data['data']">
 
-		    <img src={{d['images']['thumbnail']['url']}} class="img-thumbnail">
+		    <img src={{d['images']['thumbnail']['url']}} class="img-thumbnail" />
 
         <div class="caption">
-          <h4><a href="" class="locationUrl" data-toggle="modal" data-target="#myModal"> {{d['location']['latitude']}},{{d['location']['longitude']}}</a></h4>
+          <h4><a href="" class="locationUrl" data-toggle="modal" data-target="#myModal" x-ng-click="centerMap(d);">{{d['location']['latitude']}}, {{d['location']['longitude']}}</a></h4>
         </div>
 
           <!-- Modal -->
           <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
+
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                  <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                  <h4 class="modal-title" id="myModalLabel">You are here on earth...</h4>
                 </div>
+
                 <div class="modal-body">
-                  ...
+                  <img src="https://maps.googleapis.com/maps/api/staticmap?zoom=12&size=400x400&markers=color:blue%7Clabel:S%7C11211%7C11206%7C11222" id="myCoolMap" alt="">
                 </div>
+
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
+
               </div>
             </div>
           </div>
@@ -238,5 +240,3 @@
 	</div>
 
 </div>
-
-</body>

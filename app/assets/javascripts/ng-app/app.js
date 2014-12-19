@@ -37,7 +37,11 @@ angular.module('spaApp', ['ui.router', 'templates'])
 
 	$scope.reset = function() {
     window.location.reload(false);
-}
+	};
+
+  $scope.centerMap = function(data){
+  	$('#myCoolMap').attr('src', 'https://maps.googleapis.com/maps/api/staticmap?center=' + data['location']['latitude'] + ',' + data['location']['longitude'] + '&zoom=12&size=400x400&markers=color:black');
+  };
 
 })
 
