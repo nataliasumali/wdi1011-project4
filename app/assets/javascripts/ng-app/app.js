@@ -1,6 +1,6 @@
 angular.module('spaApp', ['ui.router', 'templates'])
 
-.config(function($stateProvider, $urlRouterProvider){
+.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
 
 	$urlRouterProvider.otherwise('/');
 
@@ -19,7 +19,7 @@ angular.module('spaApp', ['ui.router', 'templates'])
 		url: '/map',
 		templateUrl: 'map.html'
 	})
-})
+}])
 
 .controller('homeController', ['$scope', 'api', function($scope, api) {
 
@@ -46,7 +46,7 @@ angular.module('spaApp', ['ui.router', 'templates'])
 
 }])
 
-.service('api', function($http) {
+.service('api',['$http', function($http) {
 
 	return {
 
@@ -61,4 +61,4 @@ angular.module('spaApp', ['ui.router', 'templates'])
 
 		}
 	}
-});
+}]);
